@@ -1,0 +1,117 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CSS Footer */
+
+footer {
+  background-color: black;
+}
+
+footer > div > ul > li {
+  list-style: none;
+}
+
+.img-logos-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.img-footer {
+  width: 60px;
+  filter: invert(100%);
+}
+
+.copyright-footer {
+  margin-left: 20%;
+  color: white;
+}
+
+.links-footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 20%;
+  padding: 0;
+}
+
+.color-icon {
+  color: white;
+  font-size: 20px;
+}
+
+.icons-footer {
+  margin-top: 10px;
+}
+
+footer > div > ul > a:link {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+}
+
+footer > div > ul > a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+footer > div > ul > a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+footer > div > ul > a:active {
+  text-decoration: none;
+  color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .copyright-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin-left: 15%;
+    margin-right: 10%;
+  }
+  .links-footer {
+    margin-left: 15%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .img-footer {
+    margin-left: 0;
+  }
+  .icons-footer {
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 0;
+  }
+  .img-logos-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+  .links-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  footer {
+    padding-left: 10%;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  .priv-mediaq {
+    margin-left: 20px;
+  }
+}
