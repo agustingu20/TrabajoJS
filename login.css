@@ -1,0 +1,9 @@
+.reg-user {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-reg-user {
+  width: 400px;
+}
