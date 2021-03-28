@@ -2,6 +2,27 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(0deg, rgb(0, 0, 0), rgb(39, 81, 86));
+}
+
+/* CSS CARDS */
+
+.card {
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.cardsflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* CSS Footer */
