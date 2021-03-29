@@ -12,6 +12,19 @@ body {
     linear-gradient(0deg, rgb(0, 0, 0), rgb(39, 81, 86));
 }
 
+/* CSS Navbar */
+
+.div-busqueda {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.nav-buscar {
+  width: 500px;
+}
+
 /* CSS CARDS */
 
 .card {
