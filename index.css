@@ -25,6 +25,53 @@ body {
   width: 500px;
 }
 
+/* CSS Busqueda */
+
+.pbusqueda {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.busqueda {
+  position: absolute;
+  padding: 5px;
+}
+
+.busqueda input {
+  width: 0px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s ease;
+}
+
+.btn1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: crimson;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.busqueda:hover input {
+  width: 540px;
+}
+
+.busqueda input:focus {
+  width: 540px;
+}
+
 /* CSS CARDS */
 
 .card {
@@ -33,6 +80,16 @@ body {
 }
 
 .cardsflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CSS Logos */
+
+.logos {
+  margin-left: 0;
+  margin-top: 6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
