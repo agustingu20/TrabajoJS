@@ -14,27 +14,25 @@ body {
 
 /* CSS Navbar */
 
-.div-busqueda {
-  display: flex;
-  justify-content: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-.nav-buscar {
-  width: 500px;
+.nav1 {
+  font-size: 20px;
+  top: 0;
+  position: sticky;
+  z-index: 4;
 }
 
 /* CSS Busqueda */
 
 .pbusqueda {
-  margin-top: 15px;
   margin-left: 15px;
 }
 
 .busqueda {
   position: absolute;
   padding: 5px;
+  z-index: 5;
+  top: 3px;
+  position: fixed;
 }
 
 .busqueda input {
@@ -158,6 +156,10 @@ footer > div > ul > a:hover {
 footer > div > ul > a:active {
   text-decoration: none;
   color: white;
+}
+
+.img-logos-footer :hover {
+  color: red;
 }
 
 @media only screen and (max-width: 768px) {
