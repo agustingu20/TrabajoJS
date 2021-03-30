@@ -24,7 +24,6 @@ $seleccionArchivos.addEventListener("change", () => {
 
 const formularioForm = document.getElementById("form-producto");
 const DescripInput = document.getElementById("descripcion");
-
 const CantidadInput = document.getElementById("cantidad");
 const PrecioInput = document.getElementById("precio");
 const productosTable = document.getElementById("tabla");
@@ -72,7 +71,8 @@ function mostrarProductos() {
               <td>
                 <button onclick="eliminarProducto('${producto.id}')" class="btn btn-danger btn-sm">Eliminar</button>
                 <button onclick="mostrarDetalle('${producto.id}')" type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#mDetalles">Detalles</button>
-                
+                <button onclick="cargarModalEditar('${producto.id}')" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
+              data-bs-target="#modalEditar">Editar</button>
               </td> 
           </tr>
           `;
@@ -117,17 +117,15 @@ function mostrarDetalle(id) {
 }
 
 // Edita Productos
-
-// Esta función carga los datos del producto seleccionado,
-// en los campos del formulario del documento HTML.
+// // Esta función carga los datos dela nota seleccionada,
+// // en los campos del formulario del documento HTML.
 function cargarModalEditar(id) {
-  // Buscar la nota en el array usando el método find().
-  const ProdEncontrado = productos.find((producto) => producto.id === id);
-  editarDescripcionInput.value = ProdEncontrado.descripcion;
-  editarCantidadInput.value = ProdEncontrado.cantidad;
-  editarPrecioInput.value = ProdEncontrado.precio;
-  // Actualizar el valor de la variable global productoId, con el id del producto encontrado.
-  productoId = ProdEncontrado.id;
+  // Buscar nota en el array usando el método find().
+  const prodEncontrada = productos.find((producto) => producto.id === id);
+  editarDescripcionInput.value = prodEncontrada.descripcion;
+  editarCantidadInput.value = prodEncontrada.cantidad;
+  // Actualizar el valor de la variable global productoId, con el id del prod encontrado.
+  productoId = prodEncontrada.id;
 }
 
 // Al evento submit del formulario de edición le asignamos esta función,
