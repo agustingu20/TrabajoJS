@@ -5,20 +5,31 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="https://kit.fontawesome.com/9c21e207ab.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./modal.css">
 
 
     <title>Página de Placas de Videos</title>
 </head>
 
 <body>
-    <!-- NavBar -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Busqueda -->
+    <section class="pbusqueda">
+        <div class="busqueda">
+            <input type="text" placeholder="Buqueda" required>
+            <div class="btn1">
+                <i class="fas fa-search-plus icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark nav1">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -48,17 +59,62 @@
                             Mi Cuenta
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            <li><a class="dropdown-item" href="#">Ingresar</a></li>
+                            <li><a class="dropdown-item" data-bs-toggle="modal"
+                                    data-bs-target="#modalLogin">Ingresar</a></li>
                         </ul>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
             </div>
         </div>
     </nav>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-width">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title" id="exampleModalLabel"></p>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="button-modal-logfb">Ingresar con Facebook</button>
+                    <button class="button-modal-loggl">Ingresar con Google</button>
+                    <div class="modal-separator">
+                        <span class="modal-span">or</span>
+                        <hr class="modal-hr">
+                    </div>
+                    <form id="formularioIngresoUsuario">
+                        <div class="mb-3">
+                            <label for="inputEmailModal" class="form-label"></label>
+                            <input type="email" class="form-control" id="inputEmailModal" aria-describedby="emailHelp"
+                                placeholder="Ingrese su correo electrónico" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputContraseñaModal" class="form-label"></label>
+                            <input type="password" class="form-control" id="inputContraseñaModal"
+                                placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+                        </div>
+                        <div class="link-fyp">
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="button-modal-login">Ingresar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a href="#">¿No tienes una cuenta? Registrarse</a>
+                </div>
+                <div id="alerta" class="alert alert-danger d-none" role="alert"> Datos Incorrectos </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carrusel -->
 
     <section style="margin-top: 6px;">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -82,7 +138,7 @@
                     <img height="900px" src="./Index img/rtx308.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>NVIDIA</h5>
-                        <p>Lo mas potente junto a ti con la serie 3000</p>
+                        <p>Lo mas potente junto a vos con la serie 3000</p>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -106,59 +162,85 @@
         </div>
     </section>
 
-<section style="margin-top: 250px; margin-bottom: 250px;" class="cardsflex">
-    <div class="card" style="width: 18rem;">
-        <img height="200px" src="./Index img/nFPREtSWJf.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+    <!-- Logos -->
+
+    <section class="logos">
+        <div>
+            <img width="380" height="250" src="./Index img/48c7d8f135d1e8d16ec5de274350a03a.jpg" alt="">
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+        <div>
+            <img width="380" height="250" src="./Index img/nvidia-wallpaper-preview.jpg" alt="">
         </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img height="200px" src="./Index img/ASUS.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+        <div>
+            <img width="380" height="250" src="./Index img/logo-aorus.jpg" alt="">
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+        <div>
+            <img width="380" height="250"
+                src="./Index img/asus-rog-republic-of-gamers-logo_3840x2160_xtrafondos.com.jpg" alt="">
         </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <img height="200px" src="./Index img/RTX-30-3.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
+        <div>
+            <img width="383" height="250" src="./Index img/AMD-tarjetas-graficas.jpg" alt="">
         </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-        </ul>
-        <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+    </section>
+
+    <!-- Cards -->
+
+    <section style="margin-top: 250px; margin-bottom: 250px;" class="cardsflex">
+        <div class="card" style="width: 18rem;">
+            <img height="200px" src="./Index img/nFPREtSWJf.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
         </div>
-    </div>
-</section>
+        <div class="card" style="width: 18rem;">
+            <img height="200px" src="./Index img/ASUS.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img height="200px" src="./Index img/RTX-30-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">An item</li>
+                <li class="list-group-item">A second item</li>
+                <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Sección Footer-->
     <footer class="pt-4 pb-4">
@@ -200,6 +282,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
+    <script src="./modal.js"></script>
+
 </body>
 
 </html>

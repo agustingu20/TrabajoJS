@@ -12,6 +12,64 @@ body {
     linear-gradient(0deg, rgb(0, 0, 0), rgb(39, 81, 86));
 }
 
+/* CSS Navbar */
+
+.nav1 {
+  font-size: 20px;
+  top: 0;
+  position: sticky;
+  z-index: 4;
+}
+
+/* CSS Busqueda */
+
+.pbusqueda {
+  margin-left: 15px;
+}
+
+.busqueda {
+  position: absolute;
+  padding: 5px;
+  z-index: 5;
+  top: 3px;
+  position: fixed;
+}
+
+.busqueda input {
+  width: 0px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+  transition: all 0.6s ease;
+}
+
+.btn1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: crimson;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.busqueda:hover input {
+  width: 540px;
+}
+
+.busqueda input:focus {
+  width: 540px;
+}
+
 /* CSS CARDS */
 
 .card {
@@ -20,6 +78,16 @@ body {
 }
 
 .cardsflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CSS Logos */
+
+.logos {
+  margin-left: 0;
+  margin-top: 6px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -88,6 +156,10 @@ footer > div > ul > a:hover {
 footer > div > ul > a:active {
   text-decoration: none;
   color: white;
+}
+
+.img-logos-footer :hover {
+  color: red;
 }
 
 @media only screen and (max-width: 768px) {
