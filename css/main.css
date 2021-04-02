@@ -190,7 +190,11 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+<<<<<<< HEAD
+  /* align-items: center; */
+=======
   align-items: center;
+>>>>>>> d5a454a594e09b2d8e5adac49e2eb5cac8eaa452
   background: transparent;
   position: relative;
   z-index: 1;
@@ -206,8 +210,9 @@ iframe {
 }
 
 .wrap-contact100 {
-  width: 640px;
+  max-width: 640px;
   min-height: 40vh;
+  max-height: 750px;
   background: #fff;
   border-radius: 2px;
   padding: 40px 55px 33px 40px;
@@ -219,6 +224,21 @@ iframe {
   opacity: 1;
 }
 
+.pbusqueda-producto {
+  padding: 5px;
+  margin-left: 15px;
+  max-width: 20rem;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.busqueda-producto {
+  /* position: absolute; */
+  padding: 5px;
+  z-index: 5;
+  /* margin-top: 900px; */
+  position: fixed;
+}
 /*==================================================================
 [ Form ]*/
 
@@ -252,7 +272,7 @@ iframe {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #dbdbdb;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
 }
 
 .label-input100 {
