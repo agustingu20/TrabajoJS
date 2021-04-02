@@ -1,311 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="./css/main.css" />
-    <link rel="stylesheet" type="text/css" href="./css/admin.css" />
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- =============================================================================================== -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="./css/main.css" />
+  <link rel="stylesheet" type="text/css" href="./css/admin.css" />
+  <link rel="stylesheet" type="text/css" href="./css/index.css" />
 
-    <title>Administración de Productos</title>
-  </head>
+  <!-- =============================================================================================== -->
 
-  <body>
-    <!-- NavBar Administración -->
+  <title>Administración de Productos</title>
+</head>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#"
-          ><i class="fas fa-users-cog logo-adm"></i
-        ></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="./productos.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="./admin.html">Usuarios</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+<body>
+  <!-- NavBar Administración -->
 
-    <!-- Formulario de Alta y Mostrar imagen -->
-
-    <div class="container-contact100 col justify-content-center mb-5">
-      <div class="wrap-contact100 col-7">
-        <form class="contact100-form validate-form" id="form-producto">
-          <span class="contact100-form-title"> Carga de Productos </span>
-
-          <div
-            class="wrap-input100 validate-input"
-            data-validate="Name is required"
-          >
-            <span class="label-input100">Nombre</span>
-            <input
-              id="nombre"
-              class="input100"
-              type="text"
-              name="name"
-              placeholder="Ingrese nombre del producto"
-            />
-            <span class="focus-input100"></span>
-          </div>
-
-          <div
-            class="wrap-input100 validate-input"
-            data-validate="Name is required"
-          >
-            <span class="label-input100">Descripción</span>
-            <input
-              id="descripcion"
-              class="input100"
-              type="text"
-              name="name"
-              placeholder="Ingrese la descripción del producto"
-            />
-            <span class="focus-input100"></span>
-          </div>
-
-          <div
-            class="wrap-input100 validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <span class="label-input100">Cantidad</span>
-            <input
-              id="cantidad"
-              class="input100"
-              type="text"
-              name="email"
-              placeholder="Cantidad Ingresada"
-            />
-            <span class="focus-input100"></span>
-          </div>
-
-          <div class="wrap-input100">
-            <span class="label-input100">Precio</span>
-            <input
-              id="precio"
-              class="input100"
-              type="text"
-              name="phone"
-              placeholder="$0.00"
-            />
-            <span class="focus-input100"></span>
-          </div>
-
-          <div class="wrap-input100">
-            <span class="label-input100" style="width: 100px">URL</span>
-            <input
-              id="url"
-              class="input100"
-              type="url"
-              name="url"
-              placeholder="Ingrese URL de la imagen"
-            />
-            <span class="focus-input100"></span>
-          </div>
-
-          <div class="container-contact100-form-btn">
-            <div class="wrap-contact100-form-btn">
-              <div class="contact100-form-bgbtn"></div>
-              <button type="submit" class="btn btn-success">Enviar</button>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <!-- La imagen que vamos a usar para previsualizar lo que el usuario selecciona -->
-      <div
-        class="wrap-contact100 col-5 col justify-content-center align-content-center"
-      >
-        <img
-          style="max-width: 580px; max-height: 650px"
-          id="imagen"
-          src=""
-          alt=""
-        />
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fas fa-users-cog logo-adm"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="./admin.html">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./productos.html">Productos</a>
+          </li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <!-- Seccion busqueda de productos -->
-    <div class="mt-5 mb-3 m-lg-3">
-      <form id="formBusqueda">
-        <label for="busqueda" style="color: white">Buscar por nombre</label>
-        <input id="busqueda" type="text" />
-        <button type="submit" style="background: turquoise; width: 100px">
-          Buscar <i class="fas fa-search-plus icon" aria-hidden="true"></i>
-        </button>
-        <button
-          type="button"
-          onclick="limpiarFiltro()"
-          style="background: yellow; width: 100px"
-        >
-          Limpiar
-        </button>
+  <!-- Formulario de Alta y Mostrar imagen -->
+
+  <div class="container-contact100 col justify-content-center mb-5 mt-5 ">
+    <div class="wrap-contact100 col-7">
+      <form class="contact100-form validate-form" id="form-producto">
+        <span class="contact100-form-title"> Carga de Productos </span>
+
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+          <span class="label-input100">Nombre</span>
+          <input id="nombre" class="input100" type="text" name="name" placeholder="Ingrese nombre del producto" />
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Name is required">
+          <span class="label-input100">Descripción</span>
+          <input id="descripcion" class="input100" type="text" name="name"
+            placeholder="Ingrese la descripción del producto" />
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+          <span class="label-input100">Cantidad</span>
+          <input id="cantidad" class="input100" type="text" name="email" placeholder="Cantidad Ingresada" />
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100">
+          <span class="label-input100">Precio</span>
+          <input id="precio" class="input100" type="text" name="phone" placeholder="$0.00" />
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100">
+          <span class="label-input100" style="width: 100px">URL</span>
+          <input id="url" class="input100" type="url" name="url" placeholder="Ingrese URL de la imagen" />
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="container-contact100-form-btn">
+          <div class="wrap-contact100-form-btn">
+            <div class="contact100-form-bgbtn"></div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </div>
+        </div>
       </form>
     </div>
 
-    <!-- <div class="pbusqueda-producto mt-5 mb-3" style="background-color: azure;">
+    <!-- La imagen que vamos a usar para previsualizar lo que el usuario selecciona -->
+    <div class="wrap-contact100 col-5 col justify-content-center align-content-center">
+      <img style="max-width: 580px; max-height: 650px" id="imagen" src="" alt="" />
+    </div>
+  </div>
+
+  <!-- Seccion busqueda de productos -->
+  <div class="mt-5 mb-3 m-lg-3">
+    <form id="formBusqueda">
+      <label for="busqueda" style="color: white">Buscar por nombre</label>
+      <input id="busqueda" type="text" />
+      <button type="submit" style="background: turquoise; width: 100px">
+        Buscar <i class="fas fa-search-plus icon" aria-hidden="true"></i>
+      </button>
+      <button type="button" onclick="limpiarFiltro()" style="background: rgba(255, 255, 0, 0.692); width: 100px">
+        Limpiar
+      </button>
+    </form>
+  </div>
+
+  <!-- <div class="pbusqueda-producto mt-5 mb-3" style="background-color: azure;">
     <input type="text" placeholder="Buqueda" required="" id="busqueda">
       <div class="btn1">
         <i class="fas fa-search-plus icon" aria-hidden="true"></i>
       </div>
   </div> -->
 
-    <!-- Tabla con lista de Productos -->
-    <div class="container m-lg-0">
-      <div class="row min-vw-100">
-        <div class="col">
-          <table
-            class="table table-striped table-bordered table-hover table-dark"
-          >
-            <thead>
-              <tr>
-                <th>Nombre</th>
-                <th>Producto</th>
-                <th>Cantidad</th>
-                <th>Precio</th>
-                <th>URL</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="tabla">
-              <!-- <tr> -->
-              <!-- <td>Ratón</td>
+  <!-- Tabla con lista de Productos -->
+  <div class="">
+    <div class="row min-vw-100">
+      <div class="col table-responsive-xxl">
+        <table class="table table-striped table-bordered table-hover table-dark">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>URL</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tabla">
+            <!-- <tr> -->
+            <!-- <td>Ratón</td>
                 <td>15</td>
                 <td>100</td> -->
-              <!-- </tr> -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div id="alertaBusqueda" class="alert alert-info d-none">
-        No hay resultados para la búsqueda
+            <!-- </tr> -->
+          </tbody>
+        </table>
       </div>
     </div>
+    <div id="alertaBusqueda" class="alert alert-info d-none">
+      No hay resultados para la búsqueda
+    </div>
+  </div>
 
-    <!-- Modal Detalle -->
-    <div
-      class="modal fade"
-      id="mDetalles"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Detalle del Articulo
-            </h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+  <!-- Modal Detalle -->
+  <div class="modal fade" id="mDetalles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Detalle del Articulo
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="detalleProducto" class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Editar -->
+  <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="formularioEditar">
+          <div class="modal-body">
+            <label for="editarNombre">Nombre</label>
+            <input type="text" id="editarNombre" required />
+            <br />
+            <label for="editarDescripcion">Descripción</label>
+            <input type="text" id="editarDescripcion" required />
+            <br />
+            <label for="editarCantidad">Cantidad</label>
+            <input type="text" id="editarCantidad" required />
+            <br />
+            <label for="editarPrecio">Precio</label>
+            <input type="text" id="editarPrecio" required />
+            <br />
+            <label for="editarUrl">Url</label>
+            <input type="text" id="editarUrl" required />
+            <br />
           </div>
-          <div id="detalleProducto" class="modal-body"></div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Cerrar
             </button>
           </div>
-        </div>
+        </form>
       </div>
     </div>
-    <!-- Modal Editar -->
-    <div
-      class="modal fade"
-      id="modalEditar"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Editar Producto</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <form id="formularioEditar">
-            <div class="modal-body">
-              <label for="editarNombre">Nombre</label>
-              <input type="text" id="editarNombre" required />
-              <br />
-              <label for="editarDescripcion">Descripción</label>
-              <input type="text" id="editarDescripcion" required />
-              <br />
-              <label for="editarCantidad">Cantidad</label>
-              <input type="text" id="editarCantidad" required />
-              <br />
-              <label for="editarPrecio">Precio</label>
-              <input type="text" id="editarPrecio" required />
-              <br />
-              <label for="editarUrl">Url</label>
-              <input type="text" id="editarUrl" required />
-              <br />
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" type="submit">Enviar</button>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Cerrar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+  </div>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/productos.js"></script>
-  </body>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+  <script src="./js/productos.js"></script>
+</body>
+
 </html>
