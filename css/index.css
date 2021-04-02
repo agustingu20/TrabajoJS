@@ -14,12 +14,55 @@ body {
 
 /* CSS Navbar */
 
-.nav1 {
-  font-size: 20px;
+.navback {
+background-color: black;
+}
+.navbar1 {
   top: 0;
   position: sticky;
   z-index: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 10px ;
+  padding-right: 40px;
 }
+.navbar1 li,a,button {
+  color: aliceblue;
+  text-decoration: none;
+}
+.logonav {
+  cursor: pointer;
+  margin-right: 350px;
+}
+.navlis {
+  list-style: none;
+}
+.navlis li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.navlis li a {
+  transition: all 0.3s ease 0s;
+}
+.navlis li a:hover {
+  color: rgb(255, 0, 0);
+}
+.navbar1 button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: rgb(199, 5, 5);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  color: blanchedalmond;
+}
+.navbar1 button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(201, 21, 21);
+}
+
 
 /* CSS Busqueda */
 
@@ -31,7 +74,7 @@ body {
   position: absolute;
   padding: 5px;
   z-index: 5;
-  top: 3px;
+  top: 8px;
   position: fixed;
 }
 
@@ -51,7 +94,7 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  background: crimson;
+  background: rgb(233, 7, 7);
   width: 55px;
   height: 55px;
   line-height: 55px;
@@ -72,9 +115,23 @@ body {
 
 /* CSS CARDS */
 
-.card {
+.card1 {
   justify-content: flex-start;
   margin: auto;
+  box-shadow: 0 6px 8px 0 rgba(253, 253, 253, 0.2);
+  transition: 0.3s;
+  color: rgb(0, 0, 0);
+  background: rgb(255, 255, 255);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.card1:hover {
+  box-shadow: 0 10px 16px 0 rgba(255, 0, 0, 0.2);
+}
+
+.container1 {
+  padding: 2px 16px;
 }
 
 .cardsflex {
@@ -83,14 +140,21 @@ body {
   justify-content: center;
 }
 
+.cardsflex img {
+  width: 550px;
+  border-radius: 5px 5px 0 0;
+}
 /* CSS Logos */
 
 .logos {
   margin-left: 0;
-  margin-top: 6px;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: rgb(0, 0, 0) solid 8px;
+  border-left: none;
+  border-right: none;
 }
 
 /* CSS Footer */

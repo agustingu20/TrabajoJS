@@ -1,0 +1,40 @@
+.reg-user {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.titulo-registro {
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  color: white;
+  font-weight: 550;
+}
+
+.form-reg-user {
+  width: 400px;
+  background-color: rgba(19, 35, 47, 0.9);
+  padding: 1rem;
+}
+
+.texto-pol {
+  font-size: 10px;
+}
+
+.boton-registro {
+  color: white;
+  background-color: red;
+}
+
+.boton-registro:hover {
+  text-decoration: none;
+  color: red;
+  background-color: white;
+}
+
+footer {
+  margin-top: auto;
+}

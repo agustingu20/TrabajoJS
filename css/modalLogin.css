@@ -1,0 +1,60 @@
+/* CSS Modal Login */
+
+.modal-content {
+  font-family: "Montserrat", sans-serif;
+}
+
+.button-close {
+  font-size: 10px;
+}
+
+.modal-body {
+  background-color: rgba(19, 35, 47, 0.9);
+}
+.modal-header {
+  background-color: rgba(19, 35, 47, 0.9);
+  border-bottom: 2px solid black;
+  font-size: 20px;
+}
+.modal-footer {
+  background-color: rgba(19, 35, 47, 0.9);
+  border-top: 2px solid black;
+}
+
+.link-fyp {
+  margin: 1rem 0;
+}
+
+.link-modal-login:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: red;
+}
+
+.link-modal-login:active {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.button-modal-login {
+  border: 2px solid black;
+  border-radius: 0;
+  background-color: red;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  width: 100%;
+  margin: 10px 0px 0px;
+  padding: 14px 16px;
+}
+
+.button-singin:hover {
+  color: #4568b2;
+  font-weight: bold;
+}
+@media only screen and (max-width: 425px) {
+  .modal-width {
+    max-width: 400px;
+  }
+}

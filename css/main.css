@@ -190,7 +190,11 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+<<<<<<< HEAD
   /* align-items: center; */
+=======
+  align-items: center;
+>>>>>>> d5a454a594e09b2d8e5adac49e2eb5cac8eaa452
   background: transparent;
   position: relative;
   z-index: 1;
