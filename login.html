@@ -9,48 +9,149 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
 
     <title>Registro de usuarios</title>
 </head>
 
 <body>
+    <!-- NavBar -->
 
+    <div class="container-fluid navback">
+        <sections class=" navbar1">
+            <img class="logonav" src="" alt="logO">
+            <nav>
+                <ul class="navlis">
+                    <li><a href="default.asp">Home</a></li>
+                    <li><a href="news.asp">News</a></li>
+                    <li><a href="contact.asp">Contact</a></li>
+                    <li><a href="about.asp">About</a></li>
+                    <a class="Ingresonav" href="" data-bs-toggle="modal"
+                        data-bs-target="#modalLogin"><button>Ingresar</button></a>
+                </ul>
+            </nav>
+            </section>
+    </div>
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-width">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <p class="modal-title" id="exampleModalLabel">Ingresá con tu cuenta</p>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <form id="formularioIngresoUsuario">
+                        <div class="mb-3">
+                            <label for="inputEmailModal" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmailModal" aria-describedby="emailHelp"
+                                placeholder="Ingrese su correo electrónico" required>
+                        </div>
+                        <div class="mb-3 text-light">
+                            <label for="inputContraseñaModal" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="inputContraseñaModal"
+                                placeholder="Ingrese su contraseña" required>
+                        </div>
+                        <div class="mb-3 form-check text-light">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+                        </div>
+                        <div class="link-fyp">
+                            <a class="link-modal-login" href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="button-modal-login">Ingresar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="link-modal-login" href="./login.html">¿No tienes una cuenta? Registrarse</a>
+                </div>
+                <div id="alerta" class="alert alert-danger d-none" role="alert"> Datos Incorrectos </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de Registro -->
+    <div class="d-flex justify-content-center mt-5">
+        <p class="titulo-registro">Registro de nuevo usuario</p>
+    </div>
     <div class="reg-user">
         <form id="formularioRegistroUsuario" class="form-reg-user">
             <div class="mb-3">
-                <label for="inputNombre" class="form-label">Nombre de usuario</label>
+                <label for="inputNombre" class="form-label text-light">Nombre de usuario</label>
                 <input type="text" class="form-control" id="inputNombre" required maxlength="20">
             </div>
             <div class="mb-3">
-                <label for="inputEmail" class="form-label">Email</label>
+                <label for="inputEmail" class="form-label text-light">Email</label>
                 <input type="email" class="form-control" id="inputEmail" required maxlength="40">
             </div>
             <div class="mb-3">
-                <label for="inputContraseña" class="form-label">Contraseña nueva</label>
+                <label for="inputContraseña" class="form-label text-light">Contraseña nueva</label>
                 <input type="password" class="form-control" id="inputContraseña"
                     pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
                     placeholder="Debe contener 6 o más dígitos, una mayúscula, una minúscula y un n°.">
             </div>
             <div class="mb-3">
-                <label for="inputFechaNacimiento" class="form-label">Fecha de nacimiento</label>
+                <label for="inputFechaNacimiento" class="form-label text-light">Fecha de nacimiento</label>
                 <input type="date" id="inputFechaNacimiento" required min="1900-01-01" max="2100-12-31">
             </div>
-            <label for=" inputSexo" class="mt-2">Sexo</label>
+            <label for=" inputSexo" class="mt-2 text-light">Sexo</label>
             <select id="inputSexo" required>
                 <option>Hombre</option>
                 <option>Mujer</option>
             </select>
             <div>
-                <p class="mt-4">Al hacer clic en Registrarte, aceptas las Condiciones, la Política de datos y la
+                <p class="mt-4 text-light texto-pol">Al hacer clic en Registrarte, aceptas las Condiciones, la Política
+                    de datos y
+                    la
                     Política de cookies.
                 </p>
             </div>
             <div class="modal-footer d-flex justify-content-between mt-4">
-                <button type="submit" class="btn btn-success">Registrarte</button>
+                <button type="submit" class="btn boton-registro">Registrarte</button>
             </div>
         </form>
     </div>
+
+    <!-- Sección Footer-->
+    <footer class="pt-4 pb-4">
+        <div class="img-logos-footer">
+            <ul class="d-flex flex-wrap icons-footer">
+                <a href="https://www.facebook.com/AMDAmericadelSur/?brand_redir=23542086472">
+                    <li class="mx-1 color-icon"><i class="fab fa-facebook-square"></i></li>
+                </a>
+                <a href="https://twitter.com/amd">
+                    <li class="mx-1 color-icon"><i class="fab fa-twitter-square"></i></li>
+                </a>
+                <a href="https://www.youtube.com/user/amd?sub_confirmation=1">
+                    <li class="mx-1 color-icon"><i class="fab fa-youtube"></i></li>
+                </a>
+            </ul>
+            <div class="w-50 text-center"><a href="index.html"><img class="img-footer" src="./img/AMD_logo.svg"
+                        alt=""></a>
+            </div>
+        </div>
+        <div>
+            <div class="copyright-footer">©2021 Advanced Micro Devices, Inc</div>
+            <ul class="links-footer">
+                <a href="https://www.amd.com/es/corporate/copyright">
+                    <li>Términos y Condiciones</li>
+                </a>
+                <a href="https://www.amd.com/es/corporate/privacy">
+                    <li class="priv-mediaq">Política de Privacidad</li>
+                </a>
+                <a href="https://www.amd.com/es/corporate/cookies">
+                    <li class="priv-mediaq">Política de cookies</li>
+                </a>
+            </ul>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
