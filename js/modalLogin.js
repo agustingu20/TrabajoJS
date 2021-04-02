@@ -16,6 +16,7 @@ formularioIngreso.onsubmit = function (e) {
         const coincidePassAdmin = adminLogin.pass === contraseñaInputModal.value;
         if (coincideEmailUsuario && coincidePassUsuario) {
             window.location.href = './index.html';
+            alertaDiv.classList.add('d-none');
         } else if (coincideEmailAdmin && coincidePassAdmin) {
             window.location.href = './admin.html';
         } else {

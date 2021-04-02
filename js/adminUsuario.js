@@ -28,9 +28,6 @@ function mostrarUsuarios() {
         <td class="tipo-letra">${usuario.email}</td>
         <td class="tipo-letra">${usuario.nacimiento}</td>
         <td class="tipo-letra">${usuario.sexo}</td>
-        <td> <div class="form-check form-switch">
-        <input class="form-check-input mx-4" type="checkbox" id="checkHabilitar">
-        </div></td>
         <td>
         <button onclick="eliminarUsuario('${usuario.id}')" class="btn btn-danger btn-sm">Eliminar</button>
         </td>
