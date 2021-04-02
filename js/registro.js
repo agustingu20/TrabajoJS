@@ -5,6 +5,7 @@ const emailInput = document.getElementById('inputEmail');
 const nacimientoInput = document.getElementById('inputFechaNacimiento');
 const sexoInput = document.getElementById('inputSexo');
 const contraseñaInput = document.getElementById('inputContraseña');
+const habilitacionInput = document.getElementById('habilitacionUsuario');
 
 const json = localStorage.getItem('usuarios');
 const data = JSON.parse(json);
@@ -30,6 +31,7 @@ formulario.onsubmit = function (e) {
         nacimiento: inputFechaNacimiento.value,
         sexo: inputSexo.value,
         pass: contraseñaInput.value,
+        habilitacion: habilitacionInput.value,
         registro: Date.now(),
     };
     usuarios.push(usuario);
