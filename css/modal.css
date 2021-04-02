@@ -1,110 +1,52 @@
 /* CSS Modal Login */
 
+.modal-content {
+  font-family: "Montserrat", sans-serif;
+}
+
 .button-close {
   font-size: 10px;
 }
-.button-modal-logfb {
-  border: 1px solid black;
-  background-color: #4568b2;
-  color: white;
-  font-weight: 500;
-  font-size: 14px;
-  width: 100%;
-  margin: 10px 0px 0px;
-  padding: 14px 16px;
-}
 
-.button-modal-loggl {
-  border: 1px solid grey;
-  background-color: transparent;
-  color: black;
-  font-weight: 500;
-  font-size: 14px;
-  width: 100%;
-  margin: 10px 0px 0px;
-  padding: 14px 16px;
+.modal-body {
+  background-color: rgba(19, 35, 47, 0.9);
 }
-
-.modal-separator {
-  position: relative;
-  text-align: center;
-  height: 34px;
+.modal-header {
+  background-color: rgba(19, 35, 47, 0.9);
+  border-bottom: 2px solid black;
+  font-size: 20px;
 }
-
-.modal-span {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: #757575;
-  display: inline-block;
-  background-color: white;
-  padding: 8px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.modal-hr {
-  margin: -25px auto 10px;
-  width: 100%;
-  border: 0;
-  border-top: 1px solid rgb(224, 224, 224);
-  opacity: 100;
+.modal-footer {
+  background-color: rgba(19, 35, 47, 0.9);
+  border-top: 2px solid black;
 }
 
 .link-fyp {
   margin: 1rem 0;
 }
 
-div > div > div > div > form > div > a:link {
+.link-modal-login:hover {
   text-decoration: none;
-  color: black;
+  font-weight: bold;
+  color: red;
 }
 
-div > div > div > div > form > div > a:hover {
+.link-modal-login:active {
   text-decoration: none;
-  color: black;
-}
-
-div > div > div > div > form > div > a:active {
-  text-decoration: none;
-  color: black;
-}
-
-div > div > div > div > form > div > a:visited {
-  text-decoration: none;
-  color: black;
+  font-weight: bold;
+  color: white;
 }
 
 .button-modal-login {
-  border: 1px solid #eee;
+  border: 2px solid black;
   border-radius: 0;
-  background-color: #1db9ec;
+  background-color: red;
   color: white;
   font-weight: 500;
   font-size: 14px;
   width: 100%;
   margin: 10px 0px 0px;
   padding: 14px 16px;
-}
-
-div > div > div > div > a:link {
-  text-decoration: none;
-  color: black;
-}
-
-div > div > div > div > a:hover {
-  text-decoration: none;
-  color: black;
-}
-
-div > div > div > div > a:active {
-  text-decoration: none;
-  color: black;
-}
-
-div > div > div > div > a:visited {
-  text-decoration: none;
-  color: black;
 }
 
 .button-singin:hover {
