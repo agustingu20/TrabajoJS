@@ -9,9 +9,17 @@ formularioIngreso.onsubmit = function (e) {
     e.preventDefault();
     const coincideEmail = adminLogin.email === emailInput.value;
     const coincidePass = adminLogin.pass === contraseñaInput.value;
+    // const coincideEmailUsuario = emailInput === usuario.email;
+    // const coincidePassUsuario = contraseñaInput === usuario.pass;
     if (coincideEmail && coincidePass) {
         window.location.href = './admin.html';
     } else {
         alertaDiv.classList.remove('d-none');
     }
 }
+
+
+
+// else if (coincideEmailUsuario && coincidePassUsuario) {
+//     window.location.href = './admin.html';
+// }

@@ -29,6 +29,7 @@ formulario.onsubmit = function (e) {
         email: inputEmail.value,
         nacimiento: inputFechaNacimiento.value,
         sexo: inputSexo.value,
+        pass: contraseñaInput.value,
         registro: Date.now(),
     };
     usuarios.push(usuario);
@@ -37,3 +38,4 @@ formulario.onsubmit = function (e) {
     mostrarUsuarios();
     formularioForm.reset();
 }
+
