@@ -5,6 +5,8 @@ const nacimientoInput = document.getElementById('inputFechaNacimiento');
 const sexoInput = document.getElementById('inputSexo');
 const contraseñaInput = document.getElementById('inputContraseña');
 const busquedaForm = document.getElementById('formBusqueda');
+const editarForm = document.getElementById('formularioEditar');
+const habilitacionEditar = document.getElementById('editarHabilitacion');
 
 const json = localStorage.getItem('usuarios');
 const data = JSON.parse(json);
@@ -28,8 +30,10 @@ function mostrarUsuarios() {
         <td class="tipo-letra">${usuario.email}</td>
         <td class="tipo-letra">${usuario.nacimiento}</td>
         <td class="tipo-letra">${usuario.sexo}</td>
+        <td class="tipo-letra">${usuario.habilitacion}</td>
         <td>
         <button onclick="eliminarUsuario('${usuario.id}')" class="btn btn-danger btn-sm">Eliminar</button>
+        <button onclick="editarUsuario('${usuario.id}')" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditar">Bloqueo</button>
         </td>
         </tr>
         `;
@@ -84,3 +88,31 @@ const limpiarFiltro = () => {
 }
 
 busquedaForm.onsubmit = submitBusqueda;
+
+function editarUsuario(id) {
+    const usuarioEncontrado = usuarios.find((usuario) => usuario.id === id);
+    habilitacionEditar.value = usuarioEncontrado.habilitacion;
+    usuarioId = usuarioEncontrado.id;
+}
+
+editarForm.onsubmit = function editarHabilitacion(e) {
+    e.preventDefault();
+    const usuariosModificado = usuarios.map((usuario) => {
+        if (usuario.id === usuarioId) {
+            const usuariosModificado = {
+                ...usuario,
+                habilitacion: habilitacionEditar.value,
+            };
+            return usuariosModificado;
+        } else {
+            return usuario;
+        }
+    });
+    const json = JSON.stringify(usuariosModificado);
+    localStorage.setItem('usuarios', json);
+    usuarios = usuariosModificado;
+    mostrarUsuarios();
+    const myModal = document.getElementById('modalEditar');
+    var modal = bootstrap.Modal.getInstance(myModal);
+    modal.hide();
+}
