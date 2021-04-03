@@ -21,33 +21,35 @@
 
 <body>
 
-    <!-- Busqueda -->
-    <section class="pbusqueda">
-        <div class="busqueda">
-            <input type="text" placeholder="Buqueda" required>
-            <div class="btn1">
-                <i class="fas fa-search-plus icon"></i>
-            </div>
-        </div>
-    </section>
+    <!-- NavBar y Busqueda -->
 
-    <!-- NavBar -->
-
-    <div class="container-fluid navback">
-        <sections class=" navbar1">
-            <img class="logonav" src="" alt="logO">
-            <nav>
+    <nav class="navbar navbar-expand-lg navbar-dark navback">
+        <div class="container-fluid">
+            <section class="pbusqueda">
+                <div class="busqueda">
+                    <input type="text" placeholder="Buqueda" required>
+                    <div class="btn1">
+                        <i class="fas fa-search-plus icon"></i>
+                    </div>
+                </div>
+            </section>
+            <img class="logonav" src="./img/LOGO3" alt="logO">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar1" id="navbarNavDropdown">
                 <ul class="navlis">
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="news.asp">News</a></li>
-                    <li><a href="contact.asp">Contact</a></li>
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="news.asp">Precios</a></li>
+                    <li><a href="contact.asp">Categorias</a></li>
                     <li><a href="about.asp">About</a></li>
                     <a class="Ingresonav" href="" data-bs-toggle="modal"
                         data-bs-target="#modalLogin"><button>Ingresar</button></a>
                 </ul>
-            </nav>
-            </section>
-    </div>
+            </div>
+        </div>
+    </nav>
 
     <!-- Modal Login -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -84,6 +86,8 @@
                     <a class="link-modal-login" href="./registro.html">¿No tienes una cuenta? Registrarse</a>
                 </div>
                 <div id="alerta" class="alert alert-danger d-none mt-2" role="alert"> No coincide Email y Contraseña
+                </div>
+                <div id="alertaBloqueo" class="alert alert-danger d-none mt-2" role="alert"> Usuario bloqueado
                 </div>
             </div>
         </div>
