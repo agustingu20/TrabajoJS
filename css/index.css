@@ -15,7 +15,7 @@ body {
 /* CSS Navbar */
 
 .navback {
-background-color: black;
+  background-color: black;
 }
 .navbar1 {
   top: 0;
@@ -24,10 +24,12 @@ background-color: black;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 10px ;
+  padding-top: 10px;
   padding-right: 40px;
 }
-.navbar1 li,a,button {
+.navbar1 li,
+a,
+button {
   color: aliceblue;
   text-decoration: none;
 }
@@ -62,7 +64,6 @@ background-color: black;
   background-color: rgb(255, 255, 255);
   color: rgb(201, 21, 21);
 }
-
 
 /* CSS Busqueda */
 
