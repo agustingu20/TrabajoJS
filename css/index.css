@@ -37,11 +37,13 @@ button {
   color: aliceblue;
   text-decoration: none;
 }
+.logo-div {
+  width: 45px;
+}
 .logonav {
   left: 0%;
-  position: absolute;
-  width: 80px;
-  height: 75px;
+  position: relative;
+  width: 100%;
 }
 .navlis {
   list-style: none;
@@ -75,14 +77,10 @@ button {
 
 .pbusqueda {
   margin-left: 105px;
-}
-
-.busqueda {
   position: absolute;
   padding: 5px;
   z-index: 5;
-  top: 14px;
-  position: fixed;
+  top: 6px;
 }
 
 .busqueda input {
@@ -119,6 +117,41 @@ button {
 .busqueda input:focus {
   width: 540px;
 }
+@media only screen and (min-width: 1024px) {
+  .logonav {
+    top: -5px;
+  }
+  .pbusqueda {
+    top: 12px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .busqueda:hover input {
+    width: 250px;
+  }
+  .busqueda input:focus {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .busqueda:hover input {
+    width: 540px;
+  }
+  .busqueda input:focus {
+    width: 540px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .busqueda:hover input {
+    width: 200px;
+  }
+  .busqueda input:focus {
+    width: 200px;
+  }
+}
 
 /* CSS CARDS */
 
@@ -148,20 +181,26 @@ button {
 }
 
 .cardsflex img {
-  width: 550px;
+  width: 400px;
   border-radius: 5px 5px 0 0;
 }
 /* CSS Logos */
 
 .logos {
   margin-left: 0;
-  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: rgb(0, 0, 0) solid 8px;
   border-left: none;
   border-right: none;
+  background-color: rgb(10, 10, 12);
+}
+
+.logos-img {
+  max-width: 400px;
+  height: 250px;
 }
 
 /* CSS Footer */
