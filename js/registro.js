@@ -37,8 +37,8 @@ formulario.onsubmit = function (e) {
     usuarios.push(usuario);
     const json = JSON.stringify(usuarios);
     localStorage.setItem('usuarios', json);
-    mostrarUsuarios();
-    formularioForm.reset();
+    // mostrarUsuarios();
+    formulario.reset();
 }
 
 

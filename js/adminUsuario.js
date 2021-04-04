@@ -26,11 +26,11 @@ function mostrarUsuarios() {
     const usuariosMap = usuarios.map(function (usuario) {
         return `
         <tr>
-        <td class="tipo-letra">${usuario.nombre}</td>
-        <td class="tipo-letra">${usuario.email}</td>
-        <td class="tipo-letra">${usuario.nacimiento}</td>
-        <td class="tipo-letra">${usuario.sexo}</td>
-        <td class="tipo-letra">${usuario.habilitacion}</td>
+        <td class="font-table">${usuario.nombre}</td>
+        <td class="font-table">${usuario.email}</td>
+        <td class="font-table">${usuario.nacimiento}</td>
+        <td class="font-table">${usuario.sexo}</td>
+        <td class="font-table">${usuario.habilitacion}</td>
         <td>
         <button onclick="eliminarUsuario('${usuario.id}')" class="btn btn-danger btn-sm">Eliminar</button>
         <button onclick="editarUsuario('${usuario.id}')" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditar">Bloqueo</button>
