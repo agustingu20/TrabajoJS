@@ -7,3 +7,34 @@
 .navbar {
   font-size: 1.2rem;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.04) 0px,
+      rgba(255, 255, 255, 0.04) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(0deg, rgb(0, 0, 0), rgb(158, 36, 36));
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.font-adm {
+  font-family: "montserrat", sans-serif;
+  color: white;
+  font-weight: bold;
+}
+
+.bg-adm {
+  background: rgba(0, 0, 0, 0.336);
+}
+
+.font-table {
+  font-family: "ubuntu", sans-serif;
+  color: white;
+}
