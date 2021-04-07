@@ -10,10 +10,11 @@ let productoId = "";
 // const productoEnviado = document.getElementById("enviarProducto")
 
 function mostrarCards() {
-    const cardsMap = productos.map(function (producto) {
+    const cardsMap = productos.map(function (producto)
+     {
         return ` 
         <div class="card1">
-                <img id="imagenCard" src="${producto.imagen}" alt="Avatar">
+                <img id="imagenCard" src="${producto.url}" alt="Avatar">
             <div id="contenidoCard" class="containercard">
                 <h4 id="tituloCard"><b>${producto.nombre}</b></h4>
                 <h5 id="descCard">${producto.descripcion}</h5>
