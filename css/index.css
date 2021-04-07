@@ -158,7 +158,7 @@ button {
 .card1 {
   margin-right: 25px;
   margin-left: 25px;
-  box-shadow: 0 6px 8px 0 rgba(253, 253, 253, 0.2);
+  box-shadow: 0 10px 12px 0 rgba(253, 253, 253, 0.2);
   transition: 0.3s;
   color: rgb(0, 0, 0);
   background: rgb(255, 255, 255);
@@ -178,7 +178,7 @@ button {
 }
 
 .card1:hover {
-  box-shadow: 0 10px 16px 0 rgba(255, 0, 0, 0.2);
+  box-shadow: 0 20px 36px 0 rgba(255, 0, 0, 0.2);
 }
 
 .container1 {
