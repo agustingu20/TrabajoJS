@@ -13,7 +13,7 @@ function mostrarCards() {
     const cardsMap = productos.map(function (producto) {
         return ` 
         <div class="card1">
-                <img id="imagenCard" src="${producto.url}" alt="Avatar">
+                <img class="img-card" id="imagenCard" src="${producto.url}" alt="Avatar">
             <div id="contenidoCard" class="containercard">
                 <h4 class="border-0"><b>Nombre</b></h4>
                 <h4 id="tituloCard"><b>${producto.nombre}</b></h4>
