@@ -74,6 +74,18 @@ button {
   color: rgb(201, 21, 21);
 }
 
+.btn-cart-a {
+  margin-left: 20px;
+}
+
+.btn-cart-a:hover {
+  color: red;
+}
+
+.btn-cart {
+  font-size: 1.3rem;
+}
+
 /* CSS Busqueda */
 
 .pbusqueda {

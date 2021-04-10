@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link rel="shortcut icon" href="./img/LOGO3" type="image/x-icon">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/modalLogin.css">
@@ -43,13 +46,34 @@
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./index.html#divCards">Precios</a></li>
                     <li><a href="./index.html#divCards">Categorias</a></li>
-                    <li><a href="about.asp">About</a></li>
-                    <a class="Ingresonav" href="" data-bs-toggle="modal"
-                        data-bs-target="#modalLogin"><button>Ingresar</button></a>
+                    <li><a href="#">About</a></li>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modalLogin"><button>Ingresar</button></a>
+                    <a class="btn-cart-a" href="" data-bs-toggle="modal" data-bs-target="#modalCarrito"><i
+                            class="fas fa-shopping-cart btn-cart"></i></a>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Modal Carrito -->
+
+    <div class="modal" tabindex="-1" id="modalCarrito">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <h5 class="modal-title">Carrito de compra</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer text-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Modal Login -->
     <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
