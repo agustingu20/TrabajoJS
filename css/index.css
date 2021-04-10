@@ -9,7 +9,8 @@ body {
       transparent 2px,
       transparent 4px
     ),
-    linear-gradient(0deg, rgb(0, 0, 0), rgb(39, 81, 86));
+    /* linear-gradient(0deg, rgb(0, 0, 0), rgb(39, 81, 86)); */
+      linear-gradient(90deg, rgb(0, 0, 0), rgb(158, 36, 36), rgb(0, 0, 0));
 }
 
 /* CSS Navbar */
@@ -150,6 +151,18 @@ button {
   }
   .busqueda input:focus {
     width: 200px;
+  }
+}
+/* CSS Carrusel */
+
+.img-carrusel {
+  height: 750px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+  .img-carrusel {
+    height: 300px;
   }
 }
 
