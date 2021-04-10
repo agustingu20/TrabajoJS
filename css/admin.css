@@ -22,12 +22,13 @@ body {
     linear-gradient(0deg, rgb(0, 0, 0), rgb(158, 36, 36));
   background-repeat: no-repeat;
   background-size: auto;
+  font-family: "montserrat", sans-serif;
 }
 
 .font-adm {
   font-family: "montserrat", sans-serif;
   color: white;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .bg-adm {
@@ -35,6 +36,5 @@ body {
 }
 
 .font-table {
-  font-family: "ubuntu", sans-serif;
   color: white;
 }

@@ -32,8 +32,8 @@ function mostrarUsuarios() {
         <td class="font-table">${usuario.sexo}</td>
         <td class="font-table">${usuario.habilitacion}</td>
         <td>
-        <button onclick="eliminarUsuario('${usuario.id}')" class="btn btn-danger btn-sm">Eliminar</button>
-        <button onclick="editarUsuario('${usuario.id}')" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditar">Bloqueo</button>
+        <button onclick="eliminarUsuario('${usuario.id}')" class="btn btn-danger btn-sm">Eliminar <i class="fa fa-eraser" aria-hidden="true"></i></button>
+        <button onclick="editarUsuario('${usuario.id}')" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#modalEditar">Bloqueo <i class="fa fa-list" aria-hidden="true"></i></button>
         </td>
         </tr>
         `;

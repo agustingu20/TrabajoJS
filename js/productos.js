@@ -84,7 +84,7 @@ function mostrarProductos() {
                 <button onclick="eliminarProducto('${producto.id}')" class="btn btn-danger btn-sm ">Elimina   <i class="fa fa-eraser" aria-hidden="true"></i></button>
                 <button onclick="mostrarDetalle('${producto.id}')" type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#mDetalles">Ver <i class="fa fa-eye" aria-hidden="true"></i></button>
                 <button onclick="cargarModalEditar('${producto.id}')" type="button" class="btn btn-success btn-sm" data-bs-toggle="modal"
-              data-bs-target="#modalEditar">Edita  <i class="fa fa-list" aria-hidden="true"></i> </button>
+              data-bs-target="#modalEditar">Editar  <i class="fa fa-list" aria-hidden="true"></i> </button>
               </td> 
           </tr>
           `;
