@@ -31,7 +31,7 @@ formulario.onsubmit = function (e) {
         nacimiento: inputFechaNacimiento.value,
         sexo: inputSexo.value,
         pass: contraseñaInput.value,
-        habilitacion: habilitacionInput.value,
+        habilitacion: 'Habilitado',
         registro: Date.now(),
     };
     usuarios.push(usuario);
