@@ -12,18 +12,21 @@ let productoId = "";
 function mostrarCards() {
   const cardsMap = productos.map(function (producto) {
     return ` 
-        <div class="card1">
-                <img class="img-card" id="imagenCard"  style="max-width: 350px; max-height: 350px; min-height: 350px" src="${producto.url}" alt="Avatar">
-            <div id="contenidoCard" class="containercard">
-                <h4 class="border-0 mb-3" id="tituloCard"><b>${producto.nombre}</b></h4>
-                <h4 class="border-0"><b>Descripción</b></h4>
-                <h5 id="descCard">${producto.descripcion}</h5>
-                <h4 class="border-0"><b>Precio</b></h4>
-                <p id="precioCard"><b>${producto.precio}</b></p>
-                <h5 class="border-0"><b>Stock</b></h5>
-                <p id="descCard"><b>${producto.cantidad}</b></p>
-                <button id="botoncarrito" onclick="submitCarrito('${producto.id}')" class="btn2">Carrito</i></button>
-               
+        <div class="card1 medio1 bg-transparent">
+            <div class="frente">
+                <img id="imagenCard" class="img-card"
+                    src="${producto.url}" alt="">
+            </div>
+            <div class="atras">
+                <div id="contenidoCard" class="contenidoatras medio">
+                    <h1 id="tituloCard">${producto.nombre}</h1>
+                    <h2 id="precioCard">${producto.precio}</h2>
+                    <P id="descCard">${producto.descripcion}</P>
+                    <div class="iconoscard">
+                    <a href=""><i class="fas fa-shopping-cart btn-cart"></i></a>
+                    </div>
+                    <button id="botoncarrito" onclick="submitCarrito('${producto.id}')" class="btn2">Carrito</i></button>
+                </div>
             </div>
         </div>
     `;
@@ -32,7 +35,3 @@ function mostrarCards() {
 }
 
 mostrarCards();
-console.log(
-  "🚀 ~ file: index.js ~ line 20 ~ cardsMap ~ tituloCard",
-  tituloCard
-);

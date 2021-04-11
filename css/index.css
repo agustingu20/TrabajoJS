@@ -181,15 +181,179 @@ button {
 
 /* CSS CARDS */
 
+.img-card {
+  width: 400px;
+  height: 400px;
+  background-image: linear-gradient(
+      200deg,
+      rgba(171, 171, 171, 0.05) 0%,
+      rgba(171, 171, 171, 0.05) 23%,
+      rgba(90, 90, 90, 0.05) 23%,
+      rgba(90, 90, 90, 0.05) 48%,
+      rgba(65, 65, 65, 0.05) 48%,
+      rgba(65, 65, 65, 0.05) 61%,
+      rgba(232, 232, 232, 0.05) 61%,
+      rgba(232, 232, 232, 0.05) 100%
+    ),
+    linear-gradient(
+      126deg,
+      rgba(194, 194, 194, 0.05) 0%,
+      rgba(194, 194, 194, 0.05) 11%,
+      rgba(127, 127, 127, 0.05) 11%,
+      rgba(127, 127, 127, 0.05) 33%,
+      rgba(117, 117, 117, 0.05) 33%,
+      rgba(117, 117, 117, 0.05) 99%,
+      rgba(248, 248, 248, 0.05) 99%,
+      rgba(248, 248, 248, 0.05) 100%
+    ),
+    linear-gradient(
+      144deg,
+      rgba(64, 64, 64, 0.05) 0%,
+      rgba(64, 64, 64, 0.05) 33%,
+      rgba(211, 211, 211, 0.05) 33%,
+      rgba(211, 211, 211, 0.05) 50%,
+      rgba(53, 53, 53, 0.05) 50%,
+      rgba(53, 53, 53, 0.05) 75%,
+      rgba(144, 144, 144, 0.05) 75%,
+      rgba(144, 144, 144, 0.05) 100%
+    ),
+    linear-gradient(329deg, hsl(148, 0%, 0%), hsl(148, 0%, 0%));
+  padding: 1rem;
+}
+
+.medio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.medio1 {
+  transform: translate(0%, 0%);
+}
+
 .card1 {
+  cursor: pointer;
+  width: 400px;
+  height: 400px;
   margin-right: 25px;
   margin-left: 25px;
-  box-shadow: 0 10px 12px 0 rgba(253, 253, 253, 0.2);
   transition: 0.3s;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   background: rgb(255, 255, 255);
   border-radius: 6px;
   text-align: center;
+  margin-top: 30px;
+}
+
+.textarmapc1 {
+  /* font-size: 100px; */
+  margin-top: 100px;
+  margin-bottom: -160px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #000000,
+    0 0 35px #000000, 0 0 45px #000000, 0 0 60px #000000, 0 0 80px #000000;
+}
+
+.cardsflex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 160px;
+  margin-bottom: 100px;
+}
+
+.frente,
+.atras {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform 0.6s linear;
+}
+
+.frente img {
+  height: 100%;
+}
+
+.frente {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.atras {
+  background-image: linear-gradient(
+      200deg,
+      rgba(171, 171, 171, 0.05) 0%,
+      rgba(171, 171, 171, 0.05) 23%,
+      rgba(90, 90, 90, 0.05) 23%,
+      rgba(90, 90, 90, 0.05) 48%,
+      rgba(65, 65, 65, 0.05) 48%,
+      rgba(65, 65, 65, 0.05) 61%,
+      rgba(232, 232, 232, 0.05) 61%,
+      rgba(232, 232, 232, 0.05) 100%
+    ),
+    linear-gradient(
+      126deg,
+      rgba(194, 194, 194, 0.05) 0%,
+      rgba(194, 194, 194, 0.05) 11%,
+      rgba(127, 127, 127, 0.05) 11%,
+      rgba(127, 127, 127, 0.05) 33%,
+      rgba(117, 117, 117, 0.05) 33%,
+      rgba(117, 117, 117, 0.05) 99%,
+      rgba(248, 248, 248, 0.05) 99%,
+      rgba(248, 248, 248, 0.05) 100%
+    ),
+    linear-gradient(
+      144deg,
+      rgba(64, 64, 64, 0.05) 0%,
+      rgba(64, 64, 64, 0.05) 33%,
+      rgba(211, 211, 211, 0.05) 33%,
+      rgba(211, 211, 211, 0.05) 50%,
+      rgba(53, 53, 53, 0.05) 50%,
+      rgba(53, 53, 53, 0.05) 75%,
+      rgba(144, 144, 144, 0.05) 75%,
+      rgba(144, 144, 144, 0.05) 100%
+    ),
+    linear-gradient(329deg, hsl(148, 0%, 0%), hsl(148, 0%, 0%));
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.contenidoatras {
+  color: wheat;
+  text-align: center;
+  width: 100%;
+}
+
+.iconoscard {
+  margin: 20px 0;
+}
+
+.iconoscard a {
+  text-decoration: none;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  font-size: 18px;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.iconoscard a:hover {
+  background: wheat;
+  color: red;
+}
+
+.card1:hover > .frente {
+  transform: perspective(600px) rotateY(-180deg);
+}
+
+.card1:hover > .atras {
+  transform: perspective(600px) rotateY(0deg);
 }
 
 @media only screen and (max-width: 1024px) {
@@ -197,63 +361,6 @@ button {
     margin-top: 50px;
   }
 }
-
-.img-card {
-  max-width: 350px;
-  max-height: 350px;
-  padding: 1rem;
-}
-
-.card1:hover {
-  box-shadow: 0 20px 36px 0 rgba(255, 0, 0, 0.2);
-}
-
-.container1 {
-  padding: 2px 16px;
-}
-
-.cardsflex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.cardsflex img {
-  width: 350px;
-  border-radius: 5px 5px 0 0;
-}
-
-.card1 h4 {
-  border: none;
-  border-bottom: solid 2px rgb(102, 102, 102);
-}
-
-.card1 p {
-  font-size: 23px;
-}
-
-.btn2 {
-  text-decoration: none;
-  background: rgb(233, 7, 7);
-  width: 150px;
-  height: 60px;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  border-radius: 30px;
-}
-
-.containercard button {
-  text-decoration: none;
-}
-
-.btn2:hover {
-  background-color: rgb(255, 255, 255);
-  color: rgb(201, 21, 21);
-  transition: 0.6s;
-}
-
 /* CSS Logos */
 
 .logos {
