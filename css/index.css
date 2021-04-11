@@ -1,4 +1,5 @@
 body {
+  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -272,134 +273,70 @@ button {
   height: 250px;
 }
 
+/* CSS armatupc {} */
+
 .armapc {
-  margin-top: 80px;
-  margin-left: 35px;
-  text-align: start;
+  margin-top: 10px;
+  text-align: center;
   color: white;
 }
 
-.armatupc {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+.textarmapc {
+  font-size: 100px;
+  margin-top: 150px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #000000, 0 0 35px #000000, 0 0 45px #000000,
+    0 0 60px #000000, 0 0 80px #000000;
 }
+
+/* CSS About */
+.about {
+  background-color: rgb(7, 5, 5);
+}
+
+.tituloabout {
+  color: #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff,
+    0 0 55px #ffffff, 0 0 75px #ffffff;
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.textabout {
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.imagenabout {
+  text-align: center;
+}
+
 
 /* CSS Footer */
+.footer1 {
+  margin-top: auto;
+}
 
-footer {
+.footer {
   background-color: black;
+  font-family: "Montserrat", sans-serif;
 }
 
-footer > div > ul > li {
-  list-style: none;
-}
-
-.img-logos-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-.img-footer {
-  width: 60px;
-  filter: invert(100%);
-}
-
-.copyright-footer {
-  margin-left: 20%;
-  color: white;
-}
-
-.links-footer {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 20%;
-  padding: 0;
-}
-
-.color-icon {
-  color: white;
-  font-size: 20px;
-}
-
-.icons-footer {
-  display: flex;
-  flex-direction: row;
-  text-align: start;
-  margin-top: 10px;
-}
-
-footer > div > ul > a:link {
-  text-decoration: none;
-  list-style: none;
-  color: white;
-}
-
-footer > div > ul > a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-footer > div > ul > a:hover {
-  text-decoration: none;
+.footer a:hover {
   color: red;
 }
 
-footer > div > ul > a:active {
-  text-decoration: none;
-  color: white;
+.footer .social-icon:hover {
+  color: rgb(252, 38, 0);
+  transition: 0.3s;
 }
 
-.img-logos-footer :hover {
-  color: red;
-}
-
-@media only screen and (max-width: 768px) {
-  .copyright-footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    margin-left: 15%;
-    margin-right: 10%;
-  }
-  .links-footer {
-    margin-left: 15%;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  .img-footer {
-    margin-left: 0;
-  }
-  .icons-footer {
-    margin-left: 3px;
-    margin-right: 3px;
-    padding: 0;
-  }
-  .img-logos-footer {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-bottom: 15px;
-  }
-  .links-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  footer {
-    padding-left: 10%;
-  }
-}
-
-@media only screen and (min-width: 650px) {
-  .priv-mediaq {
-    margin-left: 20px;
-  }
+.social-icon {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  margin: 15px;
 }
