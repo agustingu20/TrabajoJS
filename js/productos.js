@@ -23,6 +23,11 @@
 // Alta de Productos
 
 const formularioForm = document.getElementById("form-producto");
+console.log(
+  "🚀 ~ file: productos.js ~ line 26 ~ formularioForm",
+  formularioForm
+);
+
 const NombreInput = document.getElementById("nombre");
 const DescripInput = document.getElementById("descripcion");
 const CantidadInput = document.getElementById("cantidad");
