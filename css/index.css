@@ -343,7 +343,7 @@ button {
   border-radius: 50%;
 }
 
-.iconoscard a:hover {
+.iconoscard button:hover {
   background: wheat;
   color: red;
 }

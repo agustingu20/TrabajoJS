@@ -10,8 +10,8 @@ let productoId = "";
 // const productoEnviado = document.getElementById("enviarProducto")
 
 function mostrarCards() {
-  const cardsMap = productos.map(function (producto) {
-    return ` 
+    const cardsMap = productos.map(function (producto) {
+        return ` 
         <div class="card1 medio1 bg-transparent">
             <div class="frente">
                 <img id="imagenCard" class="img-card"
@@ -23,15 +23,14 @@ function mostrarCards() {
                     <h2 id="precioCard">${producto.precio}</h2>
                     <P id="descCard">${producto.descripcion}</P>
                     <div class="iconoscard">
-                    <a href=""><i class="fas fa-shopping-cart btn-cart"></i></a>
+                    <button id="botoncarrito" onclick="submitCarrito('${producto.id}')" class="fas fa-shopping-cart btn-cart bg-transparent border-0" ></button>
                     </div>
-                    <button id="botoncarrito" onclick="submitCarrito('${producto.id}')" class="btn2">Carrito</i></button>
                 </div>
             </div>
         </div>
     `;
-  });
-  cardsDiv.innerHTML = cardsMap.join("");
+    });
+    cardsDiv.innerHTML = cardsMap.join("");
 }
 
 mostrarCards();
