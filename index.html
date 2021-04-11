@@ -1,467 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script
-      src="https://kit.fontawesome.com/9c21e207ab.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/9c21e207ab.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
-      crossorigin="anonymous"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <link rel="shortcut icon" href="./img/LOGO3" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/modalLogin.css" />
 
     <title>On-Point</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- NavBar y Busqueda -->
     <nav class="navbar navbar-expand-lg navbar-dark navback">
-      <div class="container-fluid">
-        <div class="logo-div">
-          <img class="logonav" src="./img/LOGO3" alt="logO" />
-        </div>
-        <section class="pbusqueda">
-          <div class="busqueda">
-            <input type="text" placeholder="Buqueda" required />
-            <div class="btn1">
-              <i class="fas fa-search-plus icon"></i>
+        <div class="container-fluid">
+            <div class="logo-div">
+                <img class="logonav" src="./img/LOGO3" alt="logO" />
             </div>
-          </div>
-        </section>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse navbar1" id="navbarNavDropdown">
-          <ul class="navlis">
-            <li><a href="./index.html">Inicio</a></li>
-            <li><a href="./index.html#divCards">Precios</a></li>
-            <li><a href="./index.html#divCards">Categorias</a></li>
-            <li><a href="#">About</a></li>
-            <a href="" data-bs-toggle="modal" data-bs-target="#modalLogin"
-              ><button>Ingresar</button></a
-            >
-            <a
-              class="btn-cart-a"
-              href=""
-              data-bs-toggle="modal"
-              data-bs-target="#modalCarrito"
-              ><i class="fas fa-shopping-cart btn-cart"></i
-            ></a>
-          </ul>
+            <section class="pbusqueda">
+                <div class="busqueda">
+                    <input type="text" placeholder="Buqueda" required />
+                    <div class="btn1">
+                        <i class="fas fa-search-plus icon"></i>
+                    </div>
+                </div>
+            </section>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar1" id="navbarNavDropdown">
+                <ul class="navlis">
+                    <li><a href="./index.html">Inicio</a></li>
+                    <li><a href="./index.html#divCards">Precios</a></li>
+                    <li><a href="./index.html#divCards">Categorias</a></li>
+                    <li><a href="#">About</a></li>
+                    <a href="" data-bs-toggle="modal" data-bs-target="#modalLogin"><button>Ingresar</button></a>
+                    <a class="btn-cart-a" href="" data-bs-toggle="modal" data-bs-target="#modalCarrito"><i
+                            class="fas fa-shopping-cart btn-cart"></i></a>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
 
     <!-- Modal Carrito -->
 
     <div class="modal" tabindex="-1" id="modalCarrito">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header text-light">
-            <h5 class="modal-title">Carrito de compra</h5>
-            <button
-              type="button"
-              class="btn-close button-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body text-light">
-            <p>Modal body text goes here.</p>
-            <table
-              class="table table-striped table-bordered table-hover table-dark"
-            >
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Precio</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="tablacard">
-                <!-- <tr> -->
-                <!-- <td>Ratón</td>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <h5 class="modal-title">Carrito de compra</h5>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <p>Modal body text goes here.</p>
+                    <table class="table table-striped table-bordered table-hover table-dark">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Precio</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablacard">
+                            <!-- <tr> -->
+                            <!-- <td>Ratón</td>
                                 <td>15</td>
                                 <td>100</td> -->
-                <!-- </tr> -->
-              </tbody>
-            </table>
-          </div>
-          <div class="modal-footer text-light">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+                            <!-- </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer text-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Modal Login -->
-    <div
-      class="modal fade"
-      id="modalLogin"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-width">
-        <div class="modal-content">
-          <div class="modal-header text-light">
-            <p class="modal-title" id="exampleModalLabel">
-              Ingresá con tu cuenta
-            </p>
-            <button
-              type="button"
-              class="btn-close button-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body text-light">
-            <form id="formularioIngresoUsuario">
-              <div class="mb-3">
-                <label for="inputEmailModal" class="form-label">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="inputEmailModal"
-                  aria-describedby="emailHelp"
-                  placeholder="Ingrese su correo electrónico"
-                  required
-                />
-              </div>
-              <div class="mb-3 text-light">
-                <label for="inputContraseñaModal" class="form-label"
-                  >Contraseña</label
-                >
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputContraseñaModal"
-                  placeholder="Ingrese su contraseña"
-                  required
-                />
-              </div>
-              <div class="mb-3 form-check text-light">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="exampleCheck1"
-                />
-                <label class="form-check-label" for="exampleCheck1"
-                  >Recuérdame</label
-                >
-              </div>
-              <div class="link-fyp">
-                <a class="link-modal-login" href="#"
-                  >¿Olvidaste tu contraseña?</a
-                >
-              </div>
-              <button type="submit" class="button-modal-login">Ingresar</button>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <a class="link-modal-login" href="./registro.html"
-              >¿No tienes una cuenta? Registrarse</a
-            >
-          </div>
-          <div id="alerta" class="alert alert-danger d-none mt-2" role="alert">
-            No coincide Email y Contraseña
-          </div>
-          <div
-            id="alertaBloqueo"
-            class="alert alert-danger d-none mt-2"
-            role="alert"
-          >
-            Usuario bloqueado
-          </div>
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-width">
+            <div class="modal-content">
+                <div class="modal-header text-light">
+                    <p class="modal-title" id="exampleModalLabel">
+                        Ingresá con tu cuenta
+                    </p>
+                    <button type="button" class="btn-close button-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-light">
+                    <form id="formularioIngresoUsuario">
+                        <div class="mb-3">
+                            <label for="inputEmailModal" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmailModal" aria-describedby="emailHelp"
+                                placeholder="Ingrese su correo electrónico" required />
+                        </div>
+                        <div class="mb-3 text-light">
+                            <label for="inputContraseñaModal" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="inputContraseñaModal"
+                                placeholder="Ingrese su contraseña" required />
+                        </div>
+                        <div class="mb-3 form-check text-light">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">Recuérdame</label>
+                        </div>
+                        <div class="link-fyp">
+                            <a class="link-modal-login" href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                        <button type="submit" class="button-modal-login">Ingresar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <a class="link-modal-login" href="./registro.html">¿No tienes una cuenta? Registrarse</a>
+                </div>
+                <div id="alerta" class="alert alert-danger d-none mt-2" role="alert">
+                    No coincide Email y Contraseña
+                </div>
+                <div id="alertaBloqueo" class="alert alert-danger d-none mt-2" role="alert">
+                    Usuario bloqueado
+                </div>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Carrusel -->
 
     <section>
-      <div
-        id="carouselExampleCaptions"
-        class="carousel slide"
-        data-bs-ride="carousel"
-      >
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-carrusel" src="./img/1.png" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>AMD</h5>
+                        <p>Nuevos lanzamientos de la serie 6000</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="img-carrusel" src="./img/rtx308.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>NVIDIA</h5>
+                        <p>Lo mas potente junto a vos con la serie 3000</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="img-carrusel" src="./img/rtx 30 aorus.jpg" class="d-block w-100" alt="..." />
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>ENSAMBLADORAS</h5>
+                        <p>Las mejoras ensambladoras del mercado</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img
-              class="img-carrusel"
-              src="./img/1.png"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>AMD</h5>
-              <p>Nuevos lanzamientos de la serie 6000</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              class="img-carrusel"
-              src="./img/rtx308.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>NVIDIA</h5>
-              <p>Lo mas potente junto a vos con la serie 3000</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img
-              class="img-carrusel"
-              src="./img/rtx 30 aorus.jpg"
-              class="d-block w-100"
-              alt="..."
-            />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>ENSAMBLADORAS</h5>
-              <p>Las mejoras ensambladoras del mercado</p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
     </section>
 
     <!-- Logos -->
 
     <section class="logos">
-      <div>
-        <img
-          class="logos-img"
-          src="./img/48c7d8f135d1e8d16ec5de274350a03a.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img
-          class="logos-img"
-          src="./img/nvidia-wallpaper-preview.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img class="logos-img" src="./img/logo-aorus.jpg" alt="" />
-      </div>
-      <div>
-        <img
-          class="logos-img"
-          src="./img/asus-rog-republic-of-gamers-logo_3840x2160_xtrafondos.com.jpg"
-          alt=""
-        />
-      </div>
-      <div>
-        <img class="logos-img" src="./img/AMD-tarjetas-graficas.jpg" alt="" />
-      </div>
-      <div>
-        <img class="logos-img" src="./img/corsair-logo-810x400.jpg" alt="" />
-      </div>
+        <div>
+            <img class="logos-img" src="./img/48c7d8f135d1e8d16ec5de274350a03a.jpg" alt="" />
+        </div>
+        <div>
+            <img class="logos-img" src="./img/nvidia-wallpaper-preview.jpg" alt="" />
+        </div>
+        <div>
+            <img class="logos-img" src="./img/logo-aorus.jpg" alt="" />
+        </div>
+        <div>
+            <img class="logos-img" src="./img/asus-rog-republic-of-gamers-logo_3840x2160_xtrafondos.com.jpg" alt="" />
+        </div>
+        <div>
+            <img class="logos-img" src="./img/AMD-tarjetas-graficas.jpg" alt="" />
+        </div>
+        <div>
+            <img class="logos-img" src="./img/corsair-logo-810x400.jpg" alt="" />
+        </div>
     </section>
 
     <!-- Seccion Arma tu pc -->
-
-    <div class="textarmapc">
-      <h1>BUSCA LA MEJOR PARA VOS</h1>
-    </div>
-    <section class="armapc" id="armaTuPc">
-      <div class="armatupc d-flex mt-sm-4">
-        <div class="col-11 mt-5 mx-auto col-sm-6 col-lg-5 d-flex">
-          <h1>BUSCA LOS MEJORES COMPONENTES</h1>
+    <div>
+        <div class="textarmapc">
+            <h1>BUSCA LO MEJOR PARA VOS</h1>
         </div>
-        <img src="./img/armatupc.webp" alt="" />
-      </div>
-    </section>
+        <section class="armapc d-flex justify-content-center" id="armaTuPc">
+            <div class="armatupc mt-sm-4">
+                <div class="col-11 mt-5 mx-auto col-sm-6 col-lg-5">
+                    <h1 class="w-100">BUSCA LOS MEJORES COMPONENTES</h1>
+                </div>
+                <img class="img-comp" src="./img/armatupc.webp" alt="" />
+            </div>
+        </section>
+    </div>
 
     <!-- Cards -->
 
-    <section
-      id="divCards"
-      style="margin-top: 160px; margin-bottom: 200px"
-      class="cardsflex"
-    >
-      <div class="card1">
-        <img
-          id="imagenCard"
-          style="max-width: 400px; max-height: 400px"
-          src="./img/radeon 6800en.jpg"
-          alt="Avatar"
-        />
+    <section id="divCards" style="margin-top: 160px; margin-bottom: 200px" class="cardsflex">
+        <!-- <div class="card1">
+            <img id="imagenCard" style="max-width: 400px; max-height: 400px" src="./img/radeon 6800en.jpg"
+                alt="Avatar" />
 
-        <div id="contenidoCard" class="containercard">
-          <h4 id="tituloCard"><b>AMD Radeon RX 5600 XT</b></h4>
-          <h5 id="descCard">Descripcion</h5>
-          <p id="precioCard"><b>$150000</b></p>
-          <p>
-            <button class="btn2" type="submit" id="botoncarrito">
-              Carrito
-            </button>
-            <!-- <form id="form-carrito">
+            <div id="contenidoCard" class="containercard">
+                <h4 id="tituloCard"><b>AMD Radeon RX 5600 XT</b></h4>
+                <h5 id="descCard">Descripcion</h5>
+                <p id="precioCard"><b>$150000</b></p>
+                <p>
+                    <button class="btn2" type="submit" id="botoncarrito">
+                        Carrito
+                    </button>
+                    <form id="form-carrito">
                 <div>
                 <button id="botoncarrito" type="submit" class="btn btn-success">
                 Carrito
                 </button>
             </div>
-        </form>  -->
-          </p>
-        </div>
-      </div>
+        </form> 
+                </p>
+            </div>
+        </div> -->
     </section>
 
     <!-- Sección About-->
     <section id="about" class="about">
-      <div class="tituloabout"><h1>¿Quienes Somos?</h1></div>
-      <div class="textabout">
-        <h2>
-          Somos On-Point, la nueva tienda online de venta de placas de video,
-          disfruta de las mejores GPU que te podemos ofrecer de la mano de
-          nuestos sponsors.
-        </h2>
-      </div>
-      <div class="imagenabout">
-        <img
-          style="max-width: 100%"
-          width="650px"
-          height="450px"
-          src="./img/nvidiapng.png"
-          alt=""
-        />
-        <img
-          style="margin-bottom: 90px; max-width: 100%"
-          width="750px"
-          height="550px"
-          src="https://static-geektopia.com/storage/geek/products/msi/geforce-rtx-3090-suprim-x/product_1605863567eae6b405d02592de5fd9d813401af68c.png"
-          alt=""
-        />
-      </div>
+        <div class="tituloabout">
+            <h1>¿Quienes Somos?</h1>
+        </div>
+        <div class="textabout">
+            <h2 class="p-2">
+                Somos On-Point, la nueva tienda online de venta de placas de video,
+                disfruta de las mejores GPU que te podemos ofrecer de la mano de
+                nuestos sponsors.
+            </h2>
+        </div>
+        <div class="imagenabout">
+            <img class="img-about" src="./img/nvidiapng.png" alt="" />
+            <img class="img-about2"
+                src="https://static-geektopia.com/storage/geek/products/msi/geforce-rtx-3090-suprim-x/product_1605863567eae6b405d02592de5fd9d813401af68c.png"
+                alt="" />
+        </div>
     </section>
 
     <!-- Sección Footer-->
     <footer class="pt-4 pb-4">
-      <div class="img-logos-footer">
-        <ul class="d-flex flex-wrap icons-footer">
-          <a
-            href="https://www.facebook.com/AMDAmericadelSur/?brand_redir=23542086472"
-          >
-            <li class="mx-1 color-icon">
-              <i class="fab fa-facebook-square"></i>
-            </li>
-          </a>
-          <a href="https://twitter.com/amd">
-            <li class="mx-1 color-icon">
-              <i class="fab fa-twitter-square"></i>
-            </li>
-          </a>
-          <a href="https://www.youtube.com/user/amd?sub_confirmation=1">
-            <li class="mx-1 color-icon"><i class="fab fa-youtube"></i></li>
-          </a>
-        </ul>
-        <div class="w-50 text-center">
-          <a href="index.html"><img class="img-footer" src="" alt="" /></a>
+        <div class="img-logos-footer">
+            <ul class="d-flex flex-wrap icons-footer">
+                <a href="https://www.facebook.com/AMDAmericadelSur/?brand_redir=23542086472">
+                    <li class="mx-1 color-icon">
+                        <i class="fab fa-facebook-square"></i>
+                    </li>
+                </a>
+                <a href="https://twitter.com/amd">
+                    <li class="mx-1 color-icon">
+                        <i class="fab fa-twitter-square"></i>
+                    </li>
+                </a>
+                <a href="https://www.youtube.com/user/amd?sub_confirmation=1">
+                    <li class="mx-1 color-icon"><i class="fab fa-youtube"></i></li>
+                </a>
+            </ul>
+            <div class="w-50 text-center">
+                <a href="index.html"><img class="img-footer" src="" alt="" /></a>
+            </div>
         </div>
-      </div>
-      <div>
-        <div class="copyright-footer">©2021 Advanced Micro Devices, Inc</div>
-        <ul class="links-footer">
-          <a href="https://www.amd.com/es/corporate/copyright">
-            <li>Términos y Condiciones</li>
-          </a>
-          <a href="https://www.amd.com/es/corporate/privacy">
-            <li class="priv-mediaq">Política de Privacidad</li>
-          </a>
-          <a href="https://www.amd.com/es/corporate/cookies">
-            <li class="priv-mediaq">Política de cookies</li>
-          </a>
-        </ul>
-      </div>
+        <div>
+            <div class="copyright-footer">©2021 Advanced Micro Devices, Inc</div>
+            <ul class="links-footer">
+                <a href="https://www.amd.com/es/corporate/copyright">
+                    <li>Términos y Condiciones</li>
+                </a>
+                <a href="https://www.amd.com/es/corporate/privacy">
+                    <li class="priv-mediaq">Política de Privacidad</li>
+                </a>
+                <a href="https://www.amd.com/es/corporate/cookies">
+                    <li class="priv-mediaq">Política de cookies</li>
+                </a>
+            </ul>
+        </div>
     </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
     <script src="./js/modalLogin.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/carrito.js"></script>
-  </body>
+</body>
+
 </html>

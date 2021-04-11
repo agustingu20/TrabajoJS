@@ -199,8 +199,9 @@ button {
 }
 
 .img-card {
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 350px;
+  max-height: 350px;
+  padding: 1rem;
 }
 
 .card1:hover {
@@ -218,7 +219,7 @@ button {
 }
 
 .cardsflex img {
-  width: 400px;
+  width: 350px;
   border-radius: 5px 5px 0 0;
 }
 
@@ -235,8 +236,7 @@ button {
   text-decoration: none;
   background: rgb(233, 7, 7);
   width: 150px;
-  height: 50px;
-  line-height: 55px;
+  height: 60px;
   text-align: center;
   color: white;
   font-size: 20px;
@@ -273,7 +273,7 @@ button {
   height: 250px;
 }
 
-/* CSS armatupc {} */
+/* CSS Arma tu PC */
 
 .armapc {
   margin-top: 10px;
@@ -281,13 +281,35 @@ button {
   color: white;
 }
 
+.armatupc {
+  width: 100%;
+}
+
+.img-comp {
+  width: 50%;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
 .textarmapc {
   font-size: 100px;
-  margin-top: 150px;
+  margin-top: 100px;
   text-align: center;
   color: #ffffff;
-  text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #000000, 0 0 35px #000000, 0 0 45px #000000,
-    0 0 60px #000000, 0 0 80px #000000;
+  text-shadow: 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #000000,
+    0 0 35px #000000, 0 0 45px #000000, 0 0 60px #000000, 0 0 80px #000000;
+}
+
+@media only screen and (max-width: 768px) {
+  .img-comp {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .img-comp {
+    width: 100%;
+  }
 }
 
 /* CSS About */
@@ -297,8 +319,8 @@ button {
 
 .tituloabout {
   color: #ffffff;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #ffffff,
-    0 0 55px #ffffff, 0 0 75px #ffffff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffffff,
+    0 0 30px #ffffff, 0 0 40px #ffffff, 0 0 55px #ffffff, 0 0 75px #ffffff;
   text-align: center;
   margin-bottom: 35px;
   margin-top: 20px;
@@ -315,6 +337,40 @@ button {
   text-align: center;
 }
 
+.img-about {
+  max-width: 100%;
+  width: 650px;
+  height: 450px;
+}
+
+.img-about2 {
+  max-width: 100%;
+  margin-bottom: 90px;
+  width: 750px;
+  height: 550px;
+}
+
+@media only screen and (max-width: 425px) {
+  .img-about {
+    width: 400px;
+    height: 300px;
+  }
+
+  .img-about2 {
+    width: 400px;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img-about {
+    max-width: 85%;
+  }
+
+  .img-about2 {
+    max-width: 85%;
+  }
+}
 
 /* CSS Footer */
 .footer1 {
