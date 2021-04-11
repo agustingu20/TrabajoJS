@@ -1,8 +1,8 @@
-const cardsDiv = document.getElementById('divCards')
-const cardimagen = document.getElementById('imagenCard')
-const cardtitulo = document.getElementById('tituloCard')
-const carddesc = document.getElementById('descCard')
-const cardprecio = document.getElementById('precioCard')
+const cardsDiv = document.getElementById("divCards");
+const cardimagen = document.getElementById("imagenCard");
+const cardtitulo = document.getElementById("tituloCard");
+const carddesc = document.getElementById("descCard");
+const cardprecio = document.getElementById("precioCard");
 const json = localStorage.getItem("productos"); // Traer de localStorage el dato asociado a la key del producto.
 const data = JSON.parse(json); // Convertir datos de un string JSON a código JavaScript.
 let productos = data || [];
@@ -10,8 +10,8 @@ let productoId = "";
 // const productoEnviado = document.getElementById("enviarProducto")
 
 function mostrarCards() {
-    const cardsMap = productos.map(function (producto) {
-        return ` 
+  const cardsMap = productos.map(function (producto) {
+    return ` 
         <div class="card1">
                 <img class="img-card" id="imagenCard"  style="max-width: 400px; max-height: 400px; min-height: 400px" src="${producto.url}" alt="Avatar">
             <div id="contenidoCard" class="containercard">
@@ -23,17 +23,17 @@ function mostrarCards() {
                 <p id="precioCard"><b>${producto.precio}</b></p>
                 <h5 class="border-0"><b>Stock</b></h5>
                 <p id="descCard"><b>${producto.cantidad}</b></p>
-                <p><button class="btn2">Comprar</button></p>
+                <button id="botoncarrito" onclick="submitCarrito('${producto.id}')" class="btn2">Carrito</i></button>
+               
             </div>
         </div>
-    `
-    })
-    cardsDiv.innerHTML = cardsMap.join("");
+    `;
+  });
+  cardsDiv.innerHTML = cardsMap.join("");
 }
 
 mostrarCards();
-
-
-
-
-
+console.log(
+  "🚀 ~ file: index.js ~ line 20 ~ cardsMap ~ tituloCard",
+  tituloCard
+);
