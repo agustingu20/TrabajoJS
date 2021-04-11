@@ -286,8 +286,7 @@ button {
 }
 
 .img-comp {
-  width: 50%;
-  margin-top: 3rem;
+  width: 70%;
   padding: 1rem;
 }
 
@@ -305,7 +304,6 @@ button {
     width: 75%;
   }
 }
-
 @media only screen and (max-width: 425px) {
   .img-comp {
     width: 100%;
