@@ -5,8 +5,8 @@ body {
 /* Navbar CSS */
 
 * {
-  margin: 0px;
-  padding: 0px;
+  /* margin: 0px; */
+  /* padding: 0px; */
   box-sizing: border-box;
 }
 
@@ -29,7 +29,7 @@ h6 {
 }
 
 p {
-  font-family: Poppins-Regular;
+  /* font-family: Poppins-Regular; */
   font-size: 14px;
   line-height: 1.7;
   color: #666666;
@@ -212,7 +212,7 @@ iframe {
 .contact100-form-title {
   display: block;
   width: 100%;
-  font-family: Poppins-Bold;
+  /* font-family: Poppins-Bold; */
   font-size: 39px;
   color: #333333;
   line-height: 1.2;
@@ -231,7 +231,7 @@ iframe {
 }
 
 .label-input100 {
-  font-family: Poppins-SemiBold;
+  /* font-family: Poppins-SemiBold; */
   font-size: 18px;
   color: #999999;
   line-height: 1.2;
@@ -242,7 +242,7 @@ iframe {
   display: block;
   width: 100%;
   background: transparent;
-  font-family: Poppins-Regular;
+  /* font-family: Poppins-Regular; */
   font-size: 22px;
   color: #555555;
   line-height: 1.2;
@@ -357,7 +357,7 @@ textarea.input100 {
   min-width: 244px;
   height: 50px;
 
-  font-family: Poppins-Medium;
+  /* font-family: Poppins-Medium; */
   font-size: 16px;
   color: #fff;
   line-height: 1.2;
@@ -400,7 +400,7 @@ textarea.input100 {
   right: 2px;
   pointer-events: none;
 
-  font-family: Poppins-Medium;
+  /* font-family: Poppins-Medium; */
   color: #c80000;
   font-size: 14px;
   line-height: 1.4;
@@ -417,7 +417,7 @@ textarea.input100 {
 
 .alert-validate::after {
   content: "\f06a";
-  font-family: FontAwesome;
+  /* font-family: FontAwesome; */
   display: block;
   position: absolute;
   color: #c80000;
@@ -445,7 +445,7 @@ textarea.input100 {
 
 .true-validate::after {
   content: "\f26b";
-  font-family: Material-Design-Iconic-Font;
+  /* font-family: Material-Design-Iconic-Font; */
   font-size: 22px;
   color: #00ad5f;
   display: -webkit-box;
@@ -469,7 +469,7 @@ textarea.input100 {
 [ Contact more ]*/
 
 .contact100-more {
-  font-family: Poppins-Medium;
+  /* font-family: Poppins-Medium; */
   font-size: 16px;
   color: #fff;
 
