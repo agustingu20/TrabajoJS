@@ -2,6 +2,7 @@ const cardsDiv = document.getElementById("divCards");
 const cardimagen = document.getElementById("imagenCard");
 const cardtitulo = document.getElementById("tituloCard");
 const carddesc = document.getElementById("descCard");
+const busquedaDiv = document.getElementById('divBusqueda')
 const cardprecio = document.getElementById("precioCard");
 const json = localStorage.getItem("productos"); // Traer de localStorage el dato asociado a la key del producto.
 const data = JSON.parse(json); // Convertir datos de un string JSON a código JavaScript.
@@ -34,3 +35,28 @@ function mostrarCards() {
 }
 
 mostrarCards();
+
+
+
+
+const submitBusquedainicio = (e) => {
+    e.preventDefault();
+    const inicioBusqueda = document.getElementById('busqueda22')
+    const terminos = inicioBusqueda.value.toLowerCase();
+    const productosFiltrados = productos.filter((productos) => {
+        const ProductosMinusculas = productos.nombre.toLowerCase()
+        return ProductosMinusculas.includes(terminos)
+    });
+
+    productos = productosFiltrados;
+    mostrarCards();
+}
+
+const limpiarCards = () => {
+    productos = JSON.parse(localStorage.getItem("productos")) || [];
+    busquedaDiv.reset()
+    mostrarCards();
+}
+
+busquedaDiv.onsubmit = submitBusquedainicio;
+
