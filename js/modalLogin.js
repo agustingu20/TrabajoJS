@@ -48,7 +48,7 @@ if (usuarioRegistrado.length !== 0) {
                                 ${usuarioRegistrado.nombre}
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="">Ver Perfil</a></li>
+                                <li><a class="dropdown-item" href="" data-bs-toggle="modal" onclick="mostrarDetalles('${usuarioRegistrado.id}')" data-bs-target="#modalPerfilUsuario">Ver Perfil</a></li>
                                 <li><a  onclick="cerrarSesion()" class="dropdown-item" href="">Cerrar Sesión</a></li>
                             </ul>
                         </div>
@@ -72,28 +72,18 @@ function cerrarSesion() {
     location.reload();
 }
 
-
-function eliminarProducto(id) {
-    const confirmar = confirm("Acepta eliminar el producto? ");
-    if (!confirmar) {
-        return;
-    }
-    let productosFiltrados = [];
-    for (let i = 0; i < productos.length; i++) {
-        const producto = productos[i];
-        const coincideId = producto.id === id;
-        if (!coincideId) {
-            productosFiltrados.push(producto);
-        }
-    }
-    const json = JSON.stringify(productosFiltrados);
-    localStorage.setItem("productos", json);
-    productos = productosFiltrados;
-    console.log("Se eliminó exitosamente el Producto. 👨‍💻");
-    mostrarProductos();
+function mostrarDetalles(id) {
+    const usuarioEncontrado = usuarioRegistrado.find((usuarioRegistrado) => usuarioRegistrado.id === id);
+    const detalleDiv = document.getElementById('detallePerfilUsuario');
+    const fecha = new Date(usuarioRegistrado.registro);
+    const detallesUsuario = `
+    <p class="text-light"><b>Nombre de usuario:</b> &nbsp ${usuarioEncontrado.nombre}</p>
+    <p class="text-light"><b>Email:</b> &nbsp ${usuarioEncontrado.email}</p>
+    <p class="text-light"><b>Fecha de Nacimiento:</b> &nbsp ${usuarioEncontrado.nacimiento}</p>
+    <p class="text-light"><b>Sexo:</b> &nbsp ${usuarioEncontrado.sexo}</p>
+    `;
+    detalleDiv.innerHTML = detallesUsuario;
 }
-
-
 
 formularioIngreso.onsubmit = function (e) {
     e.preventDefault();
