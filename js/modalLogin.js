@@ -67,6 +67,11 @@ if (usuarioRegistrado.length !== 0) {
     mostrarUsuarioRegistrado();
 }
 
+function cerrarSesion() {
+    localStorage.removeItem('usuarioRegistrado');
+    location.reload();
+}
+
 
 function eliminarProducto(id) {
     const confirmar = confirm("Acepta eliminar el producto? ");
