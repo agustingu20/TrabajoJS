@@ -3,6 +3,7 @@ const cardimagen = document.getElementById("imagenCard");
 const cardtitulo = document.getElementById("tituloCard");
 const carddesc = document.getElementById("descCard");
 const busquedaDiv = document.getElementById('divBusqueda')
+const busquedaDiv1 = document.getElementById('divBusqueda1')
 const cardprecio = document.getElementById("precioCard");
 const json = localStorage.getItem("productos"); // Traer de localStorage el dato asociado a la key del producto.
 const data = JSON.parse(json); // Convertir datos de un string JSON a código JavaScript.
@@ -41,9 +42,23 @@ mostrarCards();
 
 const submitBusquedainicio = (e) => {
     e.preventDefault();
-    productos = JSON.parse(localStorage.getItem("productos")) || [];    
+    productos = JSON.parse(localStorage.getItem("productos")) || [];
     const inicioBusqueda = document.getElementById('busqueda22')
     const terminos = inicioBusqueda.value.toLowerCase();
+    const productosFiltrados = productos.filter((productos) => {
+        const ProductosMinusculas = productos.nombre.toLowerCase()
+        return ProductosMinusculas.includes(terminos)
+    });
+
+    productos = productosFiltrados;
+    mostrarCards();
+}
+
+const submitBusquedainicio1 = (e) => {
+    e.preventDefault();
+    productos = JSON.parse(localStorage.getItem("productos")) || [];
+    const inicioBusqueda1 = document.getElementById('busqueda23')
+    const terminos = inicioBusqueda1.value.toLowerCase();
     const productosFiltrados = productos.filter((productos) => {
         const ProductosMinusculas = productos.nombre.toLowerCase()
         return ProductosMinusculas.includes(terminos)
@@ -59,5 +74,13 @@ const limpiarCards = () => {
     mostrarCards();
 }
 
+const limpiarCards1 = () => {
+    productos = JSON.parse(localStorage.getItem("productos")) || [];
+    busquedaDiv1.reset()
+    mostrarCards();
+}
+
 busquedaDiv.onsubmit = submitBusquedainicio;
+busquedaDiv1.onsubmit = submitBusquedainicio1;
+
 

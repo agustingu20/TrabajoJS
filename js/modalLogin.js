@@ -3,6 +3,7 @@ const alertaDiv = document.getElementById('alerta');
 const emailInputModal = document.getElementById('inputEmailModal');
 const contraseñaInputModal = document.getElementById('inputContraseñaModal');
 const alertaDivBloqueo = document.getElementById('alertaBloqueo');
+
 // const registroNavbar = document.getElementById('navbarRegistrado');
 // const sinIngreso = document.getElementById('usuarioIngreso');
 
@@ -22,14 +23,14 @@ if (usuarioRegistrado.length !== 0) {
             <div class="logo-div">
                 <img class="logonav" src="./img/LOGO3" alt="logO" />
             </div>
-            <a id="botonborrar" onclick="limpiarCards()" class="btn-buscarmenos-a"><i class="fas fa-trash"></i></a>
+            <a id="botonborrar" onclick="limpiarCards1()" class="btn-buscarmenos-a"><i class="fas fa-trash"></i></a>
             <section class="pbusqueda">
-                <div id="divBusqueda" class="busqueda">
-                    <input type="text" placeholder="Buqueda" required />
+                <form id="divBusqueda1" class="busqueda">
+                    <input type="text" id="busqueda23" placeholder="Buqueda" required />
                     <div class="btn1">
                         <i class="fas fa-search-plus icon"></i>
                     </div>
-                </div>
+                </form>
             </section>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,17 +48,16 @@ if (usuarioRegistrado.length !== 0) {
                                 ${usuarioRegistrado.nombre}
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
-                                </ul>
-                                </div>
-                                </li>
-                                <a class="btn-cart-a" href="" data-bs-toggle="modal" data-bs-target="#modalCarrito"><i
-                                class="fas fa-shopping-cart btn-cart"></i></a>
-                                </ul>
-                                </div>
-                                </div>
-                                `;
+                                <li><a class="dropdown-item" href="">Ver Perfil</a></li>
+                                <li><a  onclick="cerrarSesion()" class="dropdown-item" href="">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <a class="btn-cart-a" href="" data-bs-toggle="modal" data-bs-target="#modalCarrito"><i class="fas fa-shopping-cart btn-cart"></i></a>
+                </ul>
+            </div>
+        </div>
+                `;
         });
         registroNavbar.classList.remove('nav-registrado');
         sinIngreso.classList.add('d-none');
@@ -66,6 +66,29 @@ if (usuarioRegistrado.length !== 0) {
     };
     mostrarUsuarioRegistrado();
 }
+
+
+function eliminarProducto(id) {
+    const confirmar = confirm("Acepta eliminar el producto? ");
+    if (!confirmar) {
+        return;
+    }
+    let productosFiltrados = [];
+    for (let i = 0; i < productos.length; i++) {
+        const producto = productos[i];
+        const coincideId = producto.id === id;
+        if (!coincideId) {
+            productosFiltrados.push(producto);
+        }
+    }
+    const json = JSON.stringify(productosFiltrados);
+    localStorage.setItem("productos", json);
+    productos = productosFiltrados;
+    console.log("Se eliminó exitosamente el Producto. 👨‍💻");
+    mostrarProductos();
+}
+
+
 
 formularioIngreso.onsubmit = function (e) {
     e.preventDefault();
