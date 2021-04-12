@@ -21,7 +21,7 @@ function mostrarCards() {
             <div class="atras">
                 <div id="contenidoCard" class="contenidoatras medio">
                     <h1 id="tituloCard">${producto.nombre}</h1>
-                    <h2 id="precioCard">${producto.precio}</h2>
+                    <h2 id="precioCard">$${producto.precio}</h2>
                     <P id="descCard">${producto.descripcion}</P>
                     <div class="iconoscard">
                     <button id="botoncarrito" onclick="submitCarrito('${producto.id}')" class="fas fa-shopping-cart btn-cart bg-transparent border-0" ></button>
@@ -41,6 +41,7 @@ mostrarCards();
 
 const submitBusquedainicio = (e) => {
     e.preventDefault();
+    productos = JSON.parse(localStorage.getItem("productos")) || [];    
     const inicioBusqueda = document.getElementById('busqueda22')
     const terminos = inicioBusqueda.value.toLowerCase();
     const productosFiltrados = productos.filter((productos) => {
