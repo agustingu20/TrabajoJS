@@ -79,34 +79,37 @@ button {
   color: rgb(201, 21, 21);
 }
 
-.btn-buscarmenos-a {
-  margin-left: 50px;
-  margin-bottom: 9px;
+.btn-cart-a {
+  margin-left: 20px;
 }
 
-.btn-buscarmenos-a:hover {
+.btn-cart-a:hover {
   color: red;
 }
 
-.btn-buscarmenos-a {
+.btn-cart {
   font-size: 1.3rem;
 }
 
 .btn-buscarmenos-a {
   margin-left: 20px;
+  margin-bottom: 9px;
+  font-size: 1.3rem;
 }
 
 .btn-buscarmenos-a:hover {
   color: red;
 }
 
-.btn-buscarmenos-a {
-  font-size: 1.3rem;
+@media only screen and (max-width: 768px) {
+  .btn-buscarmenos-a {
+    margin-right: auto;
+    margin-top: auto;
+    font-size: 1.3rem;
+  }
 }
 
-
 /* CSS Busqueda */
-
 
 .pbusqueda {
   margin-left: 105px;
