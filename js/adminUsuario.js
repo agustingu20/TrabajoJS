@@ -44,6 +44,10 @@ mostrarUsuarios();
 
 
 function eliminarUsuario(id) {
+    const confirmar = confirm("¿Desea eliminar el usuario? ");
+    if (!confirmar) {
+        return;
+    }
     let usuariosFiltrados = [];
     for (let i = 0; i < usuarios.length; i++) {
         const usuario = usuarios[i];

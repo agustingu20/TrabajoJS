@@ -107,7 +107,6 @@ formularioIngreso.onsubmit = function (e) {
             alertaDiv.classList.add('d-none');
             alertaDivBloqueo.classList.add('d-none');
 
-
             usuarioRegistrado.push(usuario);
             const json2 = JSON.stringify(usuarioRegistrado);
             localStorage.setItem('usuarioRegistrado', json2);
